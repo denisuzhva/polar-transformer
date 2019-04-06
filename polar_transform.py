@@ -206,7 +206,6 @@ class PolarTransform(caffe.Layer):
     def forward(self, bottom, top):
 
         # Copy to top blob(s):
-#        top[0].data[...] = bottom[0].data[...] # This is correctly copying data
         top[0].data[...] = bottom[0].data # This is correctly copying data
 
         pic_batch = top[0].data #OK! This works!
